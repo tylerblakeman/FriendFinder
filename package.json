@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/tylerblakeman/FriendFinder#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "materialize-css": "^1.0.0-rc.2"
+    "express": "^4.17.1"
   }
 }
