@@ -16,13 +16,30 @@
 
 
 
-  <!-- questions -->
+ 
   <div class="container">
+    <!--form-->
 
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input placeholder="First & Last Name" id="name" type="text" class="validate">
+              <label for="full_name">First & Last Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input placeholder="URL" id="photo_URL" type="text" class="validate">
+              <label for="photo_URL">Photo URL</label>
+            </div>
+          </div>
+        </form>
+      </div>
 
+    <!-- questions -->
     <!-- Question 1 -->
-
-      <div class="input-field col s12" id="input-field">
+      <hr>
+      <div class="row">
+      <div class="input-field col s6" id="input-field">
           <select>
             <option value="" disabled selected>Choose your option</option>
             <option value="1">1</option>
@@ -35,8 +52,8 @@
       </div>
 
     <!-- Question 2 -->
-
-      <div class="input-field col s12" id="input-field">
+      
+      <div class="input-field col s6" id="input-field">
           <select>
             <option value="" disabled selected>Choose your option</option>
             <option value="1">1</option>
@@ -50,7 +67,7 @@
 
     <!-- Question 3 -->
 
-      <div class="input-field col s12" id="input-field">
+      <div class="input-field col s6" id="input-field">
           <select>
             <option value="" disabled selected>Choose your option</option>
             <option value="1">1</option>
@@ -65,7 +82,7 @@
 
     <!-- Question 4 -->
 
-      <div class="input-field col s12" id="input-field">
+      <div class="input-field col s6" id="input-field">
           <select>
             <option value="" disabled selected>Choose your option</option>
             <option value="1">1</option>
@@ -80,7 +97,7 @@
 
   <!-- Question 5 -->
 
-      <div class="input-field col s12" id="input-field">
+      <div class="input-field col s6" id="input-field">
           <select>
             <option value="" disabled selected>Choose your option</option>
             <option value="1">1</option>
@@ -96,7 +113,7 @@
 
   <!-- Question 6 -->
 
-      <div class="input-field col s12" id="input-field">
+      <div class="input-field col s6" id="input-field">
         <select>
           <option value="" disabled selected>Choose your option</option>
           <option value="1">1</option>
@@ -112,7 +129,7 @@
   <!-- Question 7 -->
 
 
-      <div class="input-field col s12" id="input-field">
+      <div class="input-field col s6" id="input-field">
         <select>
           <option value="" disabled selected>Choose your option</option>
           <option value="1">1</option>
@@ -126,7 +143,7 @@
 
   <!-- Question 8 -->
 
-      <div class="input-field col s12" id="input-field">
+      <div class="input-field col s6" id="input-field">
         <select>
           <option value="" disabled selected>Choose your option</option>
           <option value="1">1</option>
@@ -142,7 +159,7 @@
   <!-- Question  9 -->
 
 
-      <div class="input-field col s12" id="input-field">
+      <div class="input-field col s6" id="input-field">
         <select>
           <option value="" disabled selected>Choose your option</option>
           <option value="1">1</option>
@@ -157,7 +174,7 @@
 
   <!-- Question 10 -->
 
-      <div class="input-field col s12">
+      <div class="input-field col s6">
         <select>
           <option value="" disabled selected>Choose your option</option>
           <option value="1">1</option>
@@ -169,54 +186,70 @@
         <label class="form-input">Materialize Select</label>
       </div>
 
-
+    </div>
     <!-- Submit Button-->
     <a data-target="modal" class="submit waves-effect waves-light btn-large modal-trigger">Submit</a>
 
     <!--Empty Modal-->
     <div id="modal" class="modal">
       <div class="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
+        <h4 id="modal-title"></h4>
+        <p id = "modal-text"></p>
       </div>
       <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Okay</a>
       </div>
     </div>
 
 
   </div>
 </div>
-    <!--Jquery-->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
-    </script>
 
-    <!-- Materialize  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
-    <script>
-        // this is the materialize js for getting the drop down menus to work
-          document.addEventListener('DOMContentLoaded', function() {
+<!--Jquery-->
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+</script>
 
-        var elems = document.querySelectorAll('select');
-        var instances = M.FormSelect.init(elems);
-        var instance = M.FormSelect.getInstance("input-field");
-      });
-      //this is materialize js for getting the modal trigger to work on the submit button
+<!-- Materialize  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
+<script>
+    // this is the materialize js for getting the drop down menus to work
       document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.modal');
-        var instances = M.Modal.init(elems);        
-      });
-     
-    </script>
-    
+
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems);
+    var instance = M.FormSelect.getInstance("input-field");
+  });
+  //this is materialize js for getting the modal trigger to work on the submit button
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);        
+  });
+ 
+</script>
   <script>
   $(".submit").on("click", function(event) {
     event.preventDefault();
-    alert("HERE")
-    alert($(".input-field option:selected").text());
-    if ($(".input-field option:selected").text().includes("Choose")){
-      alert("Fill out the damn form")
+    console.log
+    if ($("#photo_URL").val().includes("http://") == false && $("#photo_URL").val().includes("https://") == false && $("#photo_URL").val().includes("www.") == false) {
+      $('#modal-title').text("There was an error with your input")
+      $('#modal-text').text("Your photo URL is not valid")
+      return;
+    }
+    else if ($(".input-field option:selected").text().includes("Choose") || $("#name").val() == "" || $("#photo_URL") == ""){
+      $('#modal-title').text("There was an error with your input")
+      $('#modal-text').text("Fill out the damn form!")
+      return;
+    }
+    else {
+      //collecting the different scores the user filled out
+      var scoresArray = [];
+      var scores = $(".input-field option:selected").text().split("");
+      scores.forEach(element => {
+        scoresArray.push(Number(element));
+      });
+
+
     }
 
 
