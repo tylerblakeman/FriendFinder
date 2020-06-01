@@ -191,9 +191,10 @@
     <a data-target="modal" class="submit waves-effect waves-light btn-large modal-trigger">Submit</a>
 
     <!--Empty Modal-->
-    <div id="modal" class="modal">
+    <div id="modal" class="modal container">
       <div class="modal-content">
         <h4 id="modal-title"></h4>
+      <img id="friend-image" class="responsive-img" src="">
         <p id = "modal-text"></p>
       </div>
       <div class="modal-footer">
@@ -231,15 +232,15 @@
   $(".submit").on("click", function(event) {
     event.preventDefault();
     console.log
-    if ($("#photo_URL").val().includes("http://") == false && $("#photo_URL").val().includes("https://") == false && $("#photo_URL").val().includes("www.") == false) {
-      $('#modal-title').text("There was an error with your input")
-      $('#modal-text').text("Your photo URL is not valid")
-      return;
-    }
-    else if ($(".input-field option:selected").text().includes("Choose") || $("#name").val() == "" || $("#photo_URL") == ""){
+    if ($(".input-field option:selected").text().includes("Choose") || $("#name") == "" || $("#photo_URL") == "") {
       $('#modal-title').text("There was an error with your input")
       $('#modal-text').text("Fill out the damn form!")
       return;
+    }
+    else if ($("#photo_URL").val().includes("http://") == false && $("#photo_URL").val().includes("https://") == false && $("#photo_URL").val().includes("www.") == false) {
+    $('#modal-title').text("There was an error with your input");
+    $('#modal-text').text("Your photo URL is not valid");
+    return;
     }
     else {
       //collecting the different scores the user filled out
@@ -248,8 +249,24 @@
       scores.forEach(element => {
         scoresArray.push(Number(element));
       });
-
-
+      var newUser = {
+          name: $("#name").val(),
+          photo: $("#photo_URL").val(),
+          scores: scoresArray
+      }
+      console.log(newUser);
+      $.post("/apiroutes", newUser, function(data){
+        if (data) {
+          console.log(`this is your new friend${data.matchedFriend}`)
+          $('#modal-title').text("Your New Friend");
+          $('#modal-text').text(data.matchedFriend);
+          $('#friend-image').attr("src", data.matchedPhoto)
+          alert(data.matchedPhoto)
+        }
+        else{
+          alert("Nope")
+        }
+      })
     }
 
 

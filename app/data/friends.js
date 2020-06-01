@@ -1,11 +1,11 @@
 var availableFriends = [{
-    name: "tyler",
-    photo: "http://lorempixel.com/output/fashion-q-c-640-480-4.jpg",
-    scores: [1,5,5,5,5,5,5,5,5,5]
+    name: "Trent",
+    photo: "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Chrome__logo.max-500x500.png",
+    scores: ['1','5','5','5','5','5','5','5','5','5']
 },{
-    name: "leah",
-    photo: "http://lorempixel.com/output/technics-q-c-640-480-10.jpg",
-    scores: [1,2,3,4,5,6,7,8,9,10]
+    name: "Lorena",
+    photo: "https://i0.wp.com/awmedu.com/wp-content/uploads/2016/08/android-logo-200x200.jpg?resize=200%2C200",
+    scores: ['1','1','1','1','1','1','1','1','1','1']
 }]
 
 module.exports = availableFriends;
