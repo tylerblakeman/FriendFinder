@@ -11,16 +11,36 @@
 </head>
 <body>
     
-        Survey page
+    <!--Navigation/Nav-bar-->
+    <nav class = "purple darken-4">
+      <div class="container">
+          <div class="navbar-fixed">
+              <div class="nav-wrapper halign-wrapper">
+                  <a href="./survey" class="brand-logo">ADHD Friend Finder</a>
+                  <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                  <ul class="right hide-on-med-and-down">
+                      <li><a href="./survey">Survey</a></li>
+                      <li><a href="./friendsapi">API</a></li>
+                      <li><a href="https://github.com/tylerblakeman/FriendFinder" class="">Github Repository</a></li>
+                  </ul>
+              </div>
+          </div>
+          </nav>
+          <!--Sidebar Nav-->
+          <ul class="sidenav" id="mobile-demo">
+              <li><a href="./survey">Survey</a></li>
+              <li><a href="./friendsapi">API</a></li>
+              <li><a href="https://github.com/tylerblakeman/FriendFinder">Github Repository</a></li>
+          </ul>
+      </div>
         
 
 
-
+    
  
-  <div class="container">
+  <div class="container section">
     <!--form-->
-
-      <div class="row">
+      <div class="row col s12">
         <form class="col s12">
           <div class="row">
             <div class="input-field col s6">
@@ -38,8 +58,12 @@
     <!-- questions -->
     <!-- Question 1 -->
       <hr>
-      <div class="row">
-      <div class="input-field col s6" id="input-field">
+      <div class="row col s12">
+        <div class="flow-text">
+          1. How often do you have trouble wrapping up the final details of a project,
+          once the challenging parts have been done?
+        </div>
+      <div class="input-field col s6 m12" id="input-field">
           <select>
             <option value="" disabled selected>Choose your option</option>
             <option value="1">1</option>
@@ -48,12 +72,16 @@
             <option value="3">4</option>
             <option value="3">5</option>
           </select>
-          <label>Materialize Select</label>
+          <label>1: Never — 5: Very Often</label>
       </div>
-
+      </div>
     <!-- Question 2 -->
-      
-      <div class="input-field col s6" id="input-field">
+      <div class="row col s12">
+        <div class="flow-text">
+          2. How often do you have difficulty getting things in order when you have to do
+          a task that requires organization?
+        </div>
+      <div class="input-field col s6 m12" id="input-field">
           <select>
             <option value="" disabled selected>Choose your option</option>
             <option value="1">1</option>
@@ -62,12 +90,16 @@
             <option value="3">4</option>
             <option value="3">5</option>
           </select>
-          <label>Materialize Select</label>
-        </div>    
+          <label>1: Never — 5: Very Often</label>
+        </div>
+      </div>            
 
     <!-- Question 3 -->
-
-      <div class="input-field col s6" id="input-field">
+      <div class="row">
+        <div class="flow-text">
+          3. How often do you have problems remembering appointments or obligations?
+        </div>
+      <div class="input-field col s6 m12" id="input-field">
           <select>
             <option value="" disabled selected>Choose your option</option>
             <option value="1">1</option>
@@ -76,13 +108,18 @@
             <option value="3">4</option>
             <option value="3">5</option>
           </select>
-          <label>Materialize Select</label>
+          <label>1: Never — 5: Very Often</label>
         </div>
+      </div>  
 
 
     <!-- Question 4 -->
-
-      <div class="input-field col s6" id="input-field">
+      <div class="row">
+        <div class="flow-text">
+          4. When you have a task that requires a lot of thought, how often do you avoid
+          or delay getting started?
+        </div>
+      <div class="input-field col s6 m12" id="input-field">
           <select>
             <option value="" disabled selected>Choose your option</option>
             <option value="1">1</option>
@@ -91,13 +128,18 @@
             <option value="3">4</option>
             <option value="3">5</option>
           </select>
-          <label>Materialize Select</label>
-        </div>  
+          <label>1: Never — 5: Very Often</label>
+        </div>
+      </div>  
 
 
   <!-- Question 5 -->
-
-      <div class="input-field col s6" id="input-field">
+      <div class="row">
+        <div class="flow-text">
+          5. How often do you fidget or squirm with your hands or feet when you have
+          to sit down for a long time?
+        </div>
+      <div class="input-field col s6 m12" id="input-field">
           <select>
             <option value="" disabled selected>Choose your option</option>
             <option value="1">1</option>
@@ -106,14 +148,18 @@
             <option value="3">4</option>
             <option value="3">5</option>
           </select>
-          <label>Materialize Select</label>
+          <label>1: Never — 5: Very Often</label>
         </div>
-
+      </div>
 
 
   <!-- Question 6 -->
-
-      <div class="input-field col s6" id="input-field">
+      <div class="row">
+        <div class="flow-text">
+          6. How often do you feel overly active and compelled to do things, like you
+          were driven by a motor?
+        </div>
+      <div class="input-field col s6 m12" id="input-field">
         <select>
           <option value="" disabled selected>Choose your option</option>
           <option value="1">1</option>
@@ -122,14 +168,19 @@
           <option value="4">4</option>
           <option value="5">5</option>
         </select>
-        <label>Materialize Select</label>
+        <label>1: Never — 5: Very Often</label>
+      </div>
       </div>
 
 
   <!-- Question 7 -->
 
-
-      <div class="input-field col s6" id="input-field">
+      <div class="row">
+        <div class="flow-text">
+          7. How often do you make careless mistakes when you have to work on a boring or
+          difficult project?
+        </div>
+      <div class="input-field col s6 m12" id="input-field">
         <select>
           <option value="" disabled selected>Choose your option</option>
           <option value="1">1</option>
@@ -138,12 +189,17 @@
           <option value="4">4</option>
           <option value="5">5</option>
         </select>
-        <label>Materialize Select</label>
+        <label>1: Never — 5: Very Often</label>
+      </div>
       </div>
 
   <!-- Question 8 -->
-
-      <div class="input-field col s6" id="input-field">
+      <div class="row">
+        <div class="flow-text">
+          8. How often do you have difficulty keeping your attention when you are doing boring
+          or repetitive work? 
+        </div>
+      <div class="input-field col s6 m12" id="input-field">
         <select>
           <option value="" disabled selected>Choose your option</option>
           <option value="1">1</option>
@@ -152,14 +208,19 @@
           <option value="4">4</option>
           <option value="5">5</option>
         </select>
-        <label>Materialize Select</label>
+        <label>1: Never — 5: Very Often 1= Never - 5 = Very Often</label>
+      </div>
       </div>
 
 
   <!-- Question  9 -->
-
-
-      <div class="input-field col s6" id="input-field">
+      <div class="row col s12">
+        <div class="flow-text">
+          9. How often do you have difficulty concentrating on what people say to you,
+          even when they are speaking to you directly?
+        </div>
+        
+      <div class="input-field col s6 m12" id="input-field">
         <select>
           <option value="" disabled selected>Choose your option</option>
           <option value="1">1</option>
@@ -168,13 +229,16 @@
           <option value="3">4</option>
           <option value="3">5</option>
         </select>
-        <label>Materialize Select</label>
+        <label>1: Never — 5: Very Often</label>
       </div>
 
 
   <!-- Question 10 -->
-
-      <div class="input-field col s6">
+      <div class="row col s12">
+        <div class="flow-text">
+          10. How often do you misplace or have difficulty finding things at home or at work?
+        </div>
+      <div class="input-field col s6 m12">
         <select>
           <option value="" disabled selected>Choose your option</option>
           <option value="1">1</option>
@@ -183,12 +247,13 @@
           <option value="3">4</option>
           <option value="3">5</option>
         </select>
-        <label class="form-input">Materialize Select</label>
+        <label class="form-input">1: Never — 5: Very Often</label>
       </div>
+    </div>
 
     </div>
     <!-- Submit Button-->
-    <a data-target="modal" class="submit waves-effect waves-light btn-large modal-trigger">Submit</a>
+    <a data-target="modal" class="submit waves-effect  purple darken-4 waves btn-large modal-trigger">Submit</a>
 
     <!--Empty Modal-->
     <div id="modal" class="modal container">
@@ -198,7 +263,7 @@
         <p id = "modal-text"></p>
       </div>
       <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Okay</a>
+        <a href="#!" class="modal-close btn white-text waves-effect waves-purple purple darken-4 btn-flat">Okay</a>
       </div>
     </div>
 
@@ -226,6 +291,12 @@
     var elems = document.querySelectorAll('.modal');
     var instances = M.Modal.init(elems);        
   });
+
+  <!--Navbar Initialization-->
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+    });
  
 </script>
   <script>
